@@ -22,7 +22,7 @@ export const PageBase = styled.main`
 `
 
 const pageType = {
-  'home': 'Teravin Test',
+  'home': 'Teravin Test React.js',
   'submission': 'Form Submission',
   'detail': 'Detail Karyawan'
 }
