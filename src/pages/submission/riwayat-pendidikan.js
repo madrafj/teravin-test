@@ -22,7 +22,6 @@ const initialState = {
 
 const RiwayatPendidikan = () => {
   const [state, setState] = useState(initialState)
-  const inputRef = useRef(null)
 
   const riwayat = useSelector(state => state.submission.riwayatPendidikan)
   const dispatch = useDispatch()
@@ -39,7 +38,6 @@ const RiwayatPendidikan = () => {
     if (isCompleted(state)) {
       dispatch(addPendidikan(state))
       setState(initialState)
-      inputRef.current.focus()
     }
     else {
       alert('Harap lengkapi semua field terlebih dahulu.')
@@ -67,7 +65,6 @@ const RiwayatPendidikan = () => {
         <View flexRow>
           <Box>
             <Input autoFocus
-              ref={inputRef}
               label="Nama Sekolah"
               value={state.namaSekolah}
               onChange={e => handleChange(e, 'namaSekolah')}
