@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { isCompleted, isEmpty } from "../../app/utils"
 import { IcOutlineAdd } from "../../components/icons"
-import { StretchButton, Submit } from "../../components/ui-base/button"
+import { FlexButton, Submit } from "../../components/ui-base/button"
 import { Input } from "../../components/ui-base/input"
 import { Box } from "../../components/ui-layout/box"
 import { Page } from "../../components/ui-layout/page"
@@ -98,10 +98,10 @@ const handleSubmit = (e) => {
             />
           </Box>
           <Box noPadding>
-            <StretchButton type="button" onClick={handleAddEntry}>
+            <FlexButton type="button" onClick={handleAddEntry}>
               <IcOutlineAdd />
               Add Pengalaman Kerja
-            </StretchButton>
+            </FlexButton>
           </Box>
         </View>
         <Submit>Next</Submit>

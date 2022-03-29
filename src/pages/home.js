@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <Page title="Teravin Test" type="home">
-      <Button onClick={() => navigate('submission/data-personal')}>+ Add Data</Button>
+      <Button right onClick={() => navigate('submission/data-personal')}>+ Add Data</Button>
       <Table>
         <thead>
           <tr key={0}>

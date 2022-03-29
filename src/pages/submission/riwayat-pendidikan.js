@@ -2,7 +2,7 @@ import { useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { isCompleted, isEmpty } from "../../app/utils"
 import { IcOutlineAdd } from "../../components/icons"
-import { StretchButton, Submit } from "../../components/ui-base/button"
+import { FlexButton, Submit } from "../../components/ui-base/button"
 import { Dropdown, Input } from "../../components/ui-base/input"
 import { Box } from "../../components/ui-layout/box"
 import { View } from "../../components/ui-layout/view"
@@ -36,7 +36,6 @@ const RiwayatPendidikan = () => {
   }
 
   const handleAddEntry = () => {
-    console.log('clicked');
     if (isCompleted(state)) {
       dispatch(addPendidikan(state))
       setState(initialState)
@@ -107,10 +106,10 @@ const RiwayatPendidikan = () => {
             />
           </Box>
           <Box noPadding>
-            <StretchButton type="button" onClick={handleAddEntry} >
+            <FlexButton type="button" onClick={handleAddEntry}>
               <IcOutlineAdd />
               Add Riwayat Pendidikan
-            </StretchButton>
+            </FlexButton>
           </Box>
         </View>
         <Submit>Next</Submit>

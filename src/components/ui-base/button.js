@@ -36,10 +36,12 @@ export const ButtonBase = ({ onClick, ...props }) => {
 export const Button = styled(ButtonBase)`
   --bgc: ${({ color }) => color || '#f0f0f0'};
   border-radius: 4px;
-  min-width: 96px;
+  min-width: 120px;
+  ${(right) => right && 'align-self: flex-start;'}
 `
-export const StretchButton = styled(ButtonBase)`
-  --bgc: '#f0f0f0';
+
+export const FlexButton = styled(ButtonBase)`
+  --bgc: #f0f0f0;
   height: 100%;
 
   svg {
@@ -48,6 +50,7 @@ export const StretchButton = styled(ButtonBase)`
     font-size: 48px;
   }
 `
+
 export const Submit = styled(Button)`
   align-self: flex-end;
   float: right;
